@@ -47,7 +47,7 @@
             bindings = <
     &kp ESC   &kp UUML  &kp O     &kp E    &kp P      &kp Z                                       &kp F     &kp G          &kp T  &kp N    &kp L     &none
     &kp TAB   &kp A     &kp COMMA &kp DOT  &kp U      &kp I                                       &kp D     &kp H          &kp C  &kp R    &kp S     &none
-    &kp RSHFT &kp OUML  &kp Q     &kp J    &kp K      &kp X                                       &kp B     &kp M          &kp W  &kp V    &kp Y     &kp RSHFT
+    &kp LSHFT &kp OUML  &kp Q     &kp J    &kp K      &kp X                                       &kp B     &kp M          &kp W  &kp V    &kp Y     &kp RSHFT
     &kp LCTL  &kp AUML  &none     &mo L2   &mo L1     &mt LGUI BSPC  &mt LALT DEL &mt LALT ENTER  &kp SPACE &lt L1 KP_N0   &mo L2 &none    &kp DE_SS &kp RCTL
             >;
         };
@@ -63,10 +63,10 @@
 
         fst_layer {
           bindings = <
-    &kp TAB    &kp ESC        &none          &kp ENTER  &none      &kp INS                       &none     &none     &kp RA(N7)  &kp RA(N0)  &kp C_PLAY_PAUSE  &kp C_NEXT
-    &kp LCTRL  &none          &kp INS        &kp LC(S)  &kp HOME   &kp END                       &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT   &kp LS(N8)        &kp LS(N9)
-    &kp LSHFT  &kp LC(Y)      &kp LC(X)      &kp LC(C)  &kp LC(V)  &tog L4                       &kp DEL   &kp BSPC  &kp RA(N8)  &kp RA(N9)  &kp RS(BSLH)      &kp C_PREV
-    &kp LSHFT  &kp LC(PG_UP)  &kp LC(PG_DN)  &kp LGUI   &none      &none    &none      &kp LALT  &none     &mo L2    &mo L3      &none       &none             &kp RSHFT
+    &kp TAB    &kp ESC        &none          &kp ENTER  &none      &kp INS                       &none     &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp C_PLAY_PAUSE  &kp C_NEXT
+    &kp LCTRL  &none          &kp INS        &kp LC(S)  &kp HOME   &kp END                       &kp LEFT  &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp LS(N8)        &kp LS(N9)
+    &kp LSHFT  &kp LC(Y)      &kp LC(X)      &kp LC(C)  &kp LC(V)  &tog L4                       &kp DEL   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp RS(BSLH)      &kp C_PREV
+    &kp LSHFT  &kp LC(PG_UP)  &kp LC(PG_DN)  &kp LGUI   &none      &none    &none      &kp LALT  &none     &kp NUM_0  &mo L3     &none      &none             &kp RSHFT
           >;
         };
 /*

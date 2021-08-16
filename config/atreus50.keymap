@@ -79,10 +79,10 @@
 */
         snd_layer {
           bindings = <
-    &none     &bt reset      &none         &none      &none            &none                     &none     &none       &none         &none      &none            &none
-    &none     &none          &none         &none      &none            &none                     &none     &none       &none         &none      &none            &none
-    &none     &bt bootloader &none         &none      &none            &none                     &none     &none       &none         &none      &none            &none
-    &none     &none          &none         &none      &none            &none  &none       &none  &none     &none       &none         &none      &none            &none
+    &none     &reset      &none         &none      &none            &none                     &none     &none       &none         &none      &none            &none
+    &none     &none       &none         &none      &none            &none                     &none     &none       &none         &none      &none            &none
+    &none     &bootloader &none         &none      &none            &none                     &none     &none       &none         &none      &none            &none
+    &none     &none       &none         &none      &none            &none  &none       &none  &none     &none       &none         &none      &none            &none
           >;
         };
 

@@ -48,8 +48,8 @@
 #define LT_DQUOT LT(_NAV,S(KC_2))
 */
 &mt {
-        tapping-term-ms = <150>;
-        quick_tap_ms = <100>;
+        tapping-term-ms = <250>;
+        quick_tap_ms = <400>;
         retro-tap;
         flavor = "tap-preferred";
     };

@@ -48,15 +48,20 @@
 #define LT_DQUOT LT(_NAV,S(KC_2))
 */
 / {
+    &mt {
+        quick_tap_ms = <100>;
+        retro-tap;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-    &kp ESC   &kp UUML  &kp O       &kp E    &kp P      &kp Z                                       &kp F          &kp G   &kp T  &kp N    &kp L     &none
-    &kp TAB   &kp A     &kp COMMA   &kp DOT  &kp U      &kp I                                       &kp D          &kp H   &kp C  &kp R    &kp S     &kp DE_MINS
-    &kp LSHFT &kp OUML  &kp Q       &kp J    &kp K      &kp X                                       &kp B          &kp M   &kp W  &kp V    &kp Y     &kp RSHFT
-    &kp LCTL  &kp AUML  &kp DE_HASH &mo L2   &mo L1     &mt LGUI BSPC  &mt LALT DEL &mt LALT ENTER  &mt LGUI SPACE &mo L1  &mo L2 &none    &kp DE_SS &kp RCTL
+    &kp ESC   &kp UUML  &kp O     &kp E       &kp P      &kp Z                                       &kp F          &kp G   &kp T  &kp N    &kp L     &none
+    &kp TAB   &kp A     &kp COMMA &kp DOT     &kp U      &kp I                                       &kp D          &kp H   &kp C  &kp R    &kp S     &kp DE_MINS
+    &kp LSHFT &kp OUML  &kp Q     &kp J       &kp K      &kp X                                       &kp B          &kp M   &kp W  &kp V    &kp Y     &kp RSHFT
+    &kp LCTL  &kp AUML  &mo L2    &kp DE_HASH &mo L1     &mt LGUI BSPC  &mt LALT DEL &mt LALT ENTER  &mt LGUI SPACE &mo L1  &none  &mo L2   &kp DE_SS &kp RCTL
             >;
         };
 

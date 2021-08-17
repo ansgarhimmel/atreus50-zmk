@@ -65,6 +65,13 @@
             flavor = "balanced";
             retro-tap;
         };
+        de_quot: german_quote_doublequote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_QUOTES";
+            #binding-cells = <0>;
+            bindings = <&kp LS(BSLH)>, <&kp LS(N2)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -72,7 +79,7 @@
 
         default_layer {
             bindings = <
-    &kp ESC &kp UUML   &hm LALT O &hs LSHFT E    &kp P      &kp Z                                 &kp F        &kp G      &hs RSHFT T &hm RALT N &kp L      &kp LS(N2)
+    &kp ESC &kp UUML   &hm LALT O &hs LSHFT E    &kp P      &kp Z                                 &kp F        &kp G      &hs RSHFT T &hm RALT N &kp L      &kp de_quot
     &kp TAB &hm LGUI A &kp COMMA  &kp DOT        &hm LCTL U &kp I                                 &kp D        &hm RCTL H &kp C       &kp R      &hm RGUI S &kp DE_MINS
     &none   &kp OUML   &kp Q      &kp J          &kp K      &kp X                                 &kp B        &kp M      &kp W       &kp V      &kp Y      &none
     &none   &kp AUML   &none      &lt L4 DE_HASH &mo L3     &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3     &mo L4      &none      &kp DE_SS  &none

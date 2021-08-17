@@ -52,7 +52,16 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            retro-tap;
+        };
+        hs: homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFT";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <180>;
             flavor = "balanced";
             retro-tap;
         };
@@ -63,7 +72,7 @@
 
         default_layer {
             bindings = <
-    &kp ESC   &kp UUML   &hm LALT O &hm LSHFT E    &kp P      &kp Z                                 &kp F        &kp G      &hm RSHFT T &hm RALT N &kp L      &none
+    &kp ESC   &kp UUML   &hm LALT O &hs LSHFT E    &kp P      &kp Z                                 &kp F        &kp G      &hs RSHFT T &hm RALT N &kp L      &none
     &kp TAB   &hm LGUI A &kp COMMA  &kp DOT        &hm LCTL U &kp I                                 &kp D        &hm RCTL H &kp C       &kp R      &hm RGUI S &kp DE_MINS
     &kp LSHFT &kp OUML   &kp Q      &kp J          &kp K      &kp X                                 &kp B        &kp M      &kp W       &kp V      &kp Y      &kp RSHFT
     &kp LCTL  &kp AUML   &none      &lt L4 DE_HASH &mo L3     &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3     &mo L4      &none      &kp DE_SS  &kp RCTL
@@ -78,14 +87,7 @@
     &trans     &none          &trans         &none       &none      &trans    &trans     &trans   &trans      &kp NUM_0  &mo L3     &kp KP_DOT &none             &trans
           >;
         };
-/*
-  [_NAV] = LAYOUT(
-       XXXXXXX ,XXXXXXX ,KC_F1   ,KC_F2   ,KC_F3   ,KC_F4   ,_______ ,                          _______ ,KC_HOME ,KC_PGUP ,KC_UP   ,KC_PGDN ,KC_END  ,XXXXXXX ,
-     XXXXXXX ,KC_MS_L ,KC_F5   ,KC_F6   ,KC_F7   ,KC_F8   ,_______ ,                          _______ ,XXXXXXX ,KC_LEFT ,KC_DOWN ,KC_RIGHT,XXXXXXX ,XXXXXXX ,
-     XXXXXXX ,XXXXXXX ,KC_F9   ,KC_F10  ,KC_F11  ,KC_F12  ,_______ ,_______ ,        _______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     KC_BTN1 ,    KC_BTN2 ,_______ ,        _______ ,_______ ,    XXXXXXX ,     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX
-  ),
-*/
+
         second_layer {
           bindings = <
     &none &none &none &none  &none  &none                     &none &kp F7 &kp F8 &kp F9 &kp F10 &kp F11

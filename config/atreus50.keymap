@@ -72,10 +72,10 @@
 
         default_layer {
             bindings = <
-    &kp ESC   &kp UUML   &hm LALT O &hs LSHFT E    &kp P      &kp Z                                 &kp F        &kp G      &hs RSHFT T &hm RALT N &kp L      &none
-    &kp TAB   &hm LGUI A &kp COMMA  &kp DOT        &hm LCTL U &kp I                                 &kp D        &hm RCTL H &kp C       &kp R      &hm RGUI S &kp DE_MINS
-    &kp LSHFT &kp OUML   &kp Q      &kp J          &kp K      &kp X                                 &kp B        &kp M      &kp W       &kp V      &kp Y      &kp RSHFT
-    &kp LCTL  &kp AUML   &none      &lt L4 DE_HASH &mo L3     &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3     &mo L4      &none      &kp DE_SS  &kp RCTL
+    &kp ESC &kp UUML   &hm LALT O &hs LSHFT E    &kp P      &kp Z                                 &kp F        &kp G      &hs RSHFT T &hm RALT N &kp L      &kp LS(N2)
+    &kp TAB &hm LGUI A &kp COMMA  &kp DOT        &hm LCTL U &kp I                                 &kp D        &hm RCTL H &kp C       &kp R      &hm RGUI S &kp DE_MINS
+    &none   &kp OUML   &kp Q      &kp J          &kp K      &kp X                                 &kp B        &kp M      &kp W       &kp V      &kp Y      &none
+    &none   &kp AUML   &none      &lt L4 DE_HASH &mo L3     &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3     &mo L4      &none      &kp DE_SS  &none
             >;
         };
 

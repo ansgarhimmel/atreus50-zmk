@@ -37,16 +37,6 @@
 #define DE_PIPE RA(NON_US_BSLH)
 #define DE_BSLH RA(MINUS)
 
-
-
-/*
-#define LT_BSPC MT(MOD_CMD, KC_BSPC)
-#define LT_DEL MT(MOD_RALT, KC_DEL)
-#define LT_ENT MT(MOD_RALT, KC_ENT)
-#define LT_SPC MT(MOD_CMD, KC_SPC)
-#define LT_HASH LT(_NAV,DE_HASH)
-#define LT_DQUOT LT(_NAV,S(KC_2))
-*/
 &mt {
         tapping-term-ms = <250>;
         quick_tap_ms = <400>;
@@ -73,14 +63,14 @@
 
         default_layer {
             bindings = <
-    &kp ESC   &kp UUML   &hm LALT O &hm LSHFT E    &kp P      &kp Z                                       &kp F          &kp G      &hm RSHFT T &hm RALT N &kp L      &none
-    &kp TAB   &hm LGUI A &kp COMMA  &kp DOT        &hm LCTL U &kp I                                       &kp D          &hm RCTL H &kp C       &kp R      &hm RGUI S &kp DE_MINS
-    &kp LSHFT &kp OUML   &kp Q      &kp J          &kp K      &kp X                                       &kp B          &kp M      &kp W       &kp V      &kp Y      &kp RSHFT
-    &kp LCTL  &kp AUML   &none      &mt L2 DE_HASH &mo L1     &mt LGUI BSPC  &mt LALT DEL &mt LALT ENTER  &mt LGUI SPACE &mo L1     &mo L2      &none      &kp DE_SS  &kp RCTL
+    &kp ESC   &kp UUML   &hm LALT O &hm LSHFT E    &kp P      &kp Z                                 &kp F        &kp G      &hm RSHFT T &hm RALT N &kp L      &none
+    &kp TAB   &hm LGUI A &kp COMMA  &kp DOT        &hm LCTL U &kp I                                 &kp D        &hm RCTL H &kp C       &kp R      &hm RGUI S &kp DE_MINS
+    &kp LSHFT &kp OUML   &kp Q      &kp J          &kp K      &kp X                                 &kp B        &kp M      &kp W       &kp V      &kp Y      &kp RSHFT
+    &kp LCTL  &kp AUML   &none      &lt L4 DE_HASH &mo L3     &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3     &mo L4      &none      &kp DE_SS  &kp RCTL
             >;
         };
 
-        fst_layer {
+        first_layer {
           bindings = <
     &trans     &kp DE_DLLR    &kp DE_PIPE    &kp DE_BSLH &kp RA(N7) &kp RA(N0)                    &kp DE_PLUS &kp N7     &kp N8     &kp N9     &kp C_PLAY_PAUSE  &kp C_NEXT
     &trans     &kp DE_AT      &kp DE_AMPSD   &kp DE_FSLH &kp LS(N8) &kp LS(N9)                    &kp DE_EQUL &kp N4     &kp N5     &kp N6     &none             &none
@@ -96,12 +86,28 @@
      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     KC_BTN1 ,    KC_BTN2 ,_______ ,        _______ ,_______ ,    XXXXXXX ,     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX
   ),
 */
-        snd_layer {
+        second_layer {
           bindings = <
-    &none     &reset      &none         &none      &none            &none                     &kp HOME  &kp PG_UP   &kp UP        &kp PG_DN  &kp END          &none
-    &none     &none       &none         &none      &none            &none                     &none     &kp LEFT    &kp DOWN      &kp RIGHT  &none            &none
-    &none     &bootloader &none         &none      &none            &none                     &none     &none       &none         &none      &none            &none
-    &none     &none       &none         &none      &none            &none  &none       &none  &none     &none       &none         &none      &none            &none
+    &none &none &none &none  &none  &none                     &none &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+    &none &none &none &none  &none  &none                     &none &kp F4 &kp F5 &kp F6 &none   &kp F12
+    &none &none &none &none  &none  &none                     &none &kp F1 &kp F2 &kp F3 &none   &none
+    &none &none &none &none  &none  &none  &none       &none  &none &none  &none  &none  &none   &none
+          >;
+        };
+        third_layer {
+          bindings = <
+    &none &reset      &none &none &none &none                     &kp HOME &kp PG_UP &kp UP   &kp PG_DN &kp END &none
+    &none &none       &none &none &none &none                     &none    &kp LEFT  &kp DOWN &kp RIGHT &none   &none
+    &none &bootloader &none &none &none &none                     &none    &none     &none    &none     &none   &none
+    &none &none       &none &none &none &none  &none       &none  &none    &none     &none    &none     &none   &none
+          >;
+        };
+        fourth_layer {
+          bindings = <
+    &none &none &none &none &none &none                     &kp HOME &kp PG_UP &kp UP   &kp PG_DN &kp END &none
+    &none &none &none &none &none &none                     &none    &kp LEFT  &kp DOWN &kp RIGHT &none   &none
+    &none &none &none &none &none &none                     &none    &none     &none    &none     &none   &none
+    &none &none &none &none &none &none  &none       &none  &none    &none     &none    &none     &none   &none
           >;
         };
 

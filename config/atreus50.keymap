@@ -37,15 +37,11 @@
 #define DE_PIPE RA(NON_US_BSLH)
 #define DE_BSLH RA(MINUS)
 
-&mt {
+&lt {
         tapping-term-ms = <250>;
         quick_tap_ms = <400>;
         retro-tap;
         flavor = "tap-preferred";
-    };
-
-&lt {
-        quick_tap_ms = <400>;
     };
 
 / {

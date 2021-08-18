@@ -76,19 +76,19 @@
 
         default_layer {
             bindings = <
-    &kp ESC &kp UUML   &hm LALT O &hs LSHFT E    &kp P      &kp Z                                 &kp F        &kp G      &hs RSHFT T &hm RALT N &kp L      &de_quot
-    &kp TAB &hm LGUI A &kp COMMA  &kp DOT        &hm LCTL U &kp I                                 &kp D        &hm RCTL H &kp C       &kp R      &hm RGUI S &kp DE_MINS
-    &none   &kp OUML   &kp Q      &kp J          &kp K      &kp X                                 &kp B        &kp M      &kp W       &kp V      &kp Y      &none
-    &none   &kp AUML   &none      &lt L4 DE_HASH &mo L3     &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3     &mo L4      &none      &kp DE_SS  &none
+    &kp ESC  &kp UUML   &hm LALT O &hs LSHFT E    &kp P      &kp Z                                 &kp F        &kp G      &hs RSHFT T &hm RALT N &kp L      &de_quot
+    &kp TAB  &hm LGUI A &kp COMMA  &kp DOT        &hm LCTL U &kp I                                 &kp D        &hm RCTL H &kp C       &kp R      &hm RGUI S &kp DE_MINS
+    &kp AUML &kp OUML   &kp Q      &kp J          &kp K      &kp X                                 &kp B        &kp M      &kp W       &kp V      &kp Y      &none
+    &none    &kp AUML   &none      &lt L4 DE_HASH &mo L3     &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3     &mo L4      &none      &kp DE_SS  &none
             >;
         };
 
         first_layer {
           bindings = <
-    &trans     &kp DE_DLLR    &kp DE_PIPE    &kp DE_BSLH &kp RA(N7) &kp RA(N0)                    &kp DE_PLUS &kp N7 &kp N8    &kp N9  &kp C_PLAY_PAUSE &kp C_NEXT
-    &trans     &kp DE_AT      &kp DE_AMPSD   &kp DE_FSLH &kp LS(N8) &kp LS(N9)                    &kp DE_EQUL &kp N4 &kp N5    &kp N6  &none            &none
-    &trans     &kp DE_PCNT    &kp DE_LT      &kp DE_GT   &kp RA(N8) &kp RA(N9)                    &kp DE_STAR &kp N1 &kp N2    &kp N3  &kp RS(BSLH)     &trans
-    &trans     &none          &trans         &none       &none      &trans    &trans     &trans   &trans      &kp N0 &kp COMMA &kp DOT &none            &trans
+    &trans     &kp DE_DLLR    &kp DE_PIPE    &kp DE_BSLH &kp RA(N7) &kp RA(N0)                    &kp DE_PLUS &kp N7 &kp N8    &kp N9  &none &none
+    &trans     &kp DE_AT      &kp DE_AMPSD   &kp DE_FSLH &kp LS(N8) &kp LS(N9)                    &kp DE_EQUL &kp N4 &kp N5    &kp N6  &none &none
+    &trans     &kp DE_PCNT    &kp DE_LT      &kp DE_GT   &kp RA(N8) &kp RA(N9)                    &kp DE_STAR &kp N1 &kp N2    &kp N3  &none &trans
+    &trans     &none          &trans         &none       &none      &trans    &trans     &trans   &trans      &kp N0 &kp COMMA &kp DOT &none &trans
           >;
         };
 
@@ -110,10 +110,10 @@
         };
         fourth_layer {
           bindings = <
-    &none &none &none &none &none &none                     &kp HOME &kp PG_UP &kp UP   &kp PG_DN &kp END &none
-    &none &none &none &none &none &none                     &none    &kp LEFT  &kp DOWN &kp RIGHT &none   &none
-    &none &none &none &none &none &none                     &none    &none     &none    &none     &none   &none
-    &none &none &none &none &none &none  &none       &none  &none    &none     &none    &none     &none   &none
+    &bt BT_CLR &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1              &kp HOME &kp PG_UP &kp UP   &kp PG_DN &kp END &none
+    &none      &none        &none        &none        &none        &none                     &none    &kp LEFT  &kp DOWN &kp RIGHT &none   &none
+    &none      &none        &none        &none        &none        &none                     &none    &none     &none    &none     &none   &none
+    &none      &none        &none        &none        &none        &none  &none       &none  &none    &none     &none    &none     &none   &none
           >;
         };
 

@@ -111,7 +111,7 @@
         fourth_layer {
           bindings = <
     &bt BT_CLR &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1              &kp HOME &kp PG_UP &kp UP   &kp PG_DN &kp END &none
-    &none      &none        &none        &none        &none        &none                     &none    &kp LEFT  &kp DOWN &kp RIGHT &none   &none
+    &none      &none        &none        &none        &bt BT_PRV   &bt BT_NXT                &none    &kp LEFT  &kp DOWN &kp RIGHT &none   &none
     &none      &none        &none        &none        &none        &none                     &none    &none     &none    &none     &none   &none
     &none      &none        &none        &none        &none        &none  &none       &none  &none    &none     &none    &none     &none   &none
           >;

@@ -40,7 +40,6 @@
 &lt {
         tapping-term-ms = <250>;
         quick_tap_ms = <400>;
-        retro-tap;
         flavor = "tap-preferred";
     };
 
@@ -54,16 +53,14 @@
             bindings = <&kp>, <&kp>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
-            retro-tap;
         };
         hs: homerow_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <160>;
             flavor = "balanced";
-            retro-tap;
         };
         de_quot: german_quote_doublequote {
             compatible = "zmk,behavior-mod-morph";

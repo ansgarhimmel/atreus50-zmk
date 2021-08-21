@@ -59,7 +59,7 @@
             label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <180>;
             flavor = "tap-preferred";
         };
         de_quot: german_quote_doublequote {

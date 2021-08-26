@@ -51,7 +51,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            tapping-term-ms = <270>;
+            tapping-term-ms = <220>;
             flavor = "tap-preferred";
         };
         hs: homerow_shift {
@@ -59,8 +59,8 @@
             label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            tapping-term-ms = <180>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            flavor = "balanced";
         };
         de_quot: german_quote_doublequote {
             compatible = "zmk,behavior-mod-morph";

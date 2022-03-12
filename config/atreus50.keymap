@@ -15,7 +15,7 @@
 #define L2 2
 #define L3 3  // NUMBERs, F1-12..
 #define L4 4  // SPECIAL
-#define L5 5  // NUMPAD
+#define L5 5  // STENO
 #define L6 6  // BL
 
 #define AUML APOS
@@ -79,7 +79,7 @@
     &kp ESC  &kp UUML   &hm LALT O &hm LCTL E     &kp P       &kp Z                                 &kp F        &kp G       &hm RCTL T &hm RALT N &kp L      &de_quot
     &kp TAB  &hm LGUI A &kp COMMA  &kp DOT        &hs LSHFT U &kp I                                 &kp D        &hs RSHFT H &kp C      &kp R      &hm RGUI S &kp DE_MINS
     &none    &kp OUML   &kp Q      &kp J          &kp K       &kp X                                 &kp B        &kp M       &kp W      &kp V      &kp Y      &none
-    &none    &kp AUML   &none      &lt L4 DE_HASH &mo L3      &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3      &mo L4     &none      &kp DE_SS  &none
+    &none    &kp AUML   &to L5     &lt L4 DE_HASH &mo L3      &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3      &mo L4     &none      &kp DE_SS  &none
             >;
         };
 
@@ -117,6 +117,14 @@
           >;
         };
 
+      fifth_layer {
+          bindings = <
+    &none &kp DE_HASH &kp DE_HASH &kp DE_HASH &kp DE_HASH &none                        &none       &kp DE_HASH &kp DE_HASH &kp DE_HASH &kp DE_HASH &none
+    &none &kp S       &kp T       &kp P       &kp H       &kp DE_STAR                  &kp DE_STAR &kp F       &kp N2      &kp L       &kp N3      &kp D
+    &none &kp S       &kp K       &kp W       &kp R       &kp DE_STAR                  &kp DE_STAR &kp N1      &kp B       &kp G       &kp N4      &kp Z
+    &none &none       &to DEFAULT &none       &kp A       &kp O       &none     &none  &kp E       &kp U       &none       &none       &none       &none
+          >;
+        };
     };
 };
 

@@ -36,6 +36,7 @@
 #define DE_GT LS(NON_US_BSLH)
 #define DE_PIPE RA(NON_US_BSLH)
 #define DE_BSLH RA(MINUS)
+#define DE_EXCL LS(N1)
 
 &lt {
         tapping-term-ms = <250>;
@@ -71,24 +72,60 @@
         };
     };
 
+
+    combos {
+      compatible = "zmk,combos";
+      combo_auml {
+          timeout-ms = <50>;
+          key-positions = <13 15>;
+          bindings = <&kp AUML>;
+      };
+      combo_ouml {
+          timeout-ms = <50>;
+          key-positions = <2 15>;
+          bindings = <&kp OUML>;
+      };
+      combo_uuml {
+          timeout-ms = <50>;
+          key-positions = <15 16>;
+          bindings = <&kp UUML>;
+      };
+      combo_sz {
+          timeout-ms = <50>;
+          key-positions = <20 22>;
+          bindings = <&kp DE_SS>;
+      };
+      combo_esc {
+          timeout-ms = <50>;
+          key-positions = <2 3>;
+          bindings = <&kp ESC>;
+      };
+      combo_tab {
+          timeout-ms = <50>;
+          key-positions = <14 15>;
+          bindings = <&kp TAB>;
+      };
+    };
+
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-    &kp ESC  &kp UUML   &hm LALT O &hm LCTL E     &kp P       &kp Z                                 &kp F        &kp G       &hm RCTL T &hm RALT N &kp L      &de_quot
-    &kp TAB  &hm LGUI A &kp COMMA  &kp DOT        &hs LSHFT U &kp I                                 &kp D        &hs RSHFT H &kp C      &kp R      &hm RGUI S &kp DE_MINS
-    &none    &kp OUML   &kp Q      &kp J          &kp K       &kp X                                 &kp B        &kp M       &kp W      &kp V      &kp Y      &none
-    &none    &kp AUML   &to L5     &lt L4 DE_HASH &mo L3      &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3      &mo L4     &none      &kp DE_SS  &none
+    &kp ESC  &de_quot    &hm LALT O &hm LCTL E     &kp P       &kp Z                                 &kp F        &kp G       &hm RCTL T &hm RALT N &kp L      &de_quot
+    &kp TAB  &hm LGUI A  &kp COMMA  &kp DOT        &hs LSHFT U &kp I                                 &kp D        &hs RSHFT H &kp C      &kp R      &hm RGUI S &kp DE_MINS
+    &none    &kp DE_EXCL &kp Q      &kp J          &kp K       &kp X                                 &kp B        &kp M       &kp W      &kp V      &kp Y      &none
+    &none    &none       &to L5     &lt L4 DE_HASH &mo L3      &lt L1 BSPC  &lt L2 DEL &lt L2 ENTER  &lt L1 SPACE &mo L3      &mo L4     &none      &kp DE_SS  &none
             >;
         };
 
         first_layer {
           bindings = <
-    &trans &kp DE_DLLR    &hm LALT DE_PIPE &hm LCTL DE_BSLH &kp RA(N7)       &kp RA(N0)                    &kp KP_PLUS &kp N7 &kp N8    &kp N9  &none &none
-    &trans &hm LGUI DE_AT &kp DE_AMPSD     &kp DE_FSLH      &hs LSHFT LS(N8) &kp LS(N9)                    &kp DE_EQUL &kp N4 &kp N5    &kp N6  &none &none
-    &trans &kp DE_PCNT    &kp DE_LT        &kp DE_GT        &kp RA(N8)       &kp RA(N9)                    &kp DE_STAR &kp N1 &kp N2    &kp N3  &none &trans
-    &trans &trans         &trans           &trans           &trans            &trans    &trans    &trans   &trans      &kp N0 &kp COMMA &kp DOT &none &trans
+    &trans &kp DE_DLLR    &hm LALT DE_PIPE &hm LCTL DE_BSLH &kp RA(N7)       &kp RA(N0)                    &kp KP_PLUS &kp N7 &kp N8    &kp N9  &kp DE_MINS &none
+    &trans &hm LGUI DE_AT &kp DE_AMPSD     &kp DE_FSLH      &hs LSHFT LS(N8) &kp LS(N9)                    &kp DE_EQUL &kp N4 &kp N5    &kp N6  &none       &none
+    &trans &kp DE_PCNT    &kp DE_LT        &kp DE_GT        &kp RA(N8)       &kp RA(N9)                    &kp DE_STAR &kp N1 &kp N2    &kp N3  &none       &trans
+    &trans &trans         &trans           &trans           &trans            &trans    &trans    &trans   &trans      &kp N0 &kp COMMA &kp DOT &none       &trans
           >;
         };
 

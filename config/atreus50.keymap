@@ -102,7 +102,7 @@
         };
         third_layer {
           bindings = <
-    &none &reset      &none &none &none &none                     &kp HOME &kp PG_UP &kp UP   &kp PG_DN &kp END &none
+    &none &sys_reset  &none &none &none &none                     &kp HOME &kp PG_UP &kp UP   &kp PG_DN &kp END &none
     &none &none       &none &none &none &none                     &none    &kp LEFT  &kp DOWN &kp RIGHT &none   &none
     &none &bootloader &none &none &none &none                     &none    &none     &none    &none     &none   &none
     &none &none       &none &none &none &none  &none       &none  &none    &none     &none    &none     &none   &none

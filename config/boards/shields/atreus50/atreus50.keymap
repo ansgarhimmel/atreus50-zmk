@@ -21,6 +21,41 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
+    combos {
+    	compatible = "zmk,combos";
+    	combo_auml {
+    	    timeout-ms = <50>;
+    	    key-positions = <13 15>;
+    	    bindings = <&kp AUML>;
+    	};
+    	combo_ouml {
+    	    timeout-ms = <50>;
+    	    key-positions = <2 15>;
+    	    bindings = <&kp OUML>;
+    	};
+    	combo_uuml {
+    	    timeout-ms = <50>;
+    	    key-positions = <15 16>;
+    	    bindings = <&kp UUML>;
+    	};
+    	combo_sz {
+    	    timeout-ms = <50>;
+    	    key-positions = <20 22>;
+    	    bindings = <&kp DE_SS>;
+    	};
+    	combo_esc {
+    	    timeout-ms = <50>;
+    	    key-positions = <2 3>;
+    	    bindings = <&kp ESC>;
+    	};
+    	combo_tab {
+    	    timeout-ms = <50>;
+    	    key-positions = <14 15>;
+    	    bindings = <&kp TAB>;
+    	};
+    };
+    
 };
 
 / {

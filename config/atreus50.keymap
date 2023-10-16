@@ -43,6 +43,9 @@
         quick_tap_ms = <400>;
         flavor = "tap-preferred";
     };
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
 
 / {
 
